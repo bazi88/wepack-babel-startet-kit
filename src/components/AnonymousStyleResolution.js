@@ -9,7 +9,7 @@ import style from './table.css';
 export default () => {
   return <div className={style.table}>
     <div className={style.row}>
-      <div className={style.cell}>A0</div>
+      <div className={style.cell}>A01212</div>
       <div className={style.cell}>B0</div>
       <div className={style.cell}>C0</div>
     </div>
