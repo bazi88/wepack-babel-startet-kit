@@ -1,8 +1,11 @@
  import React from 'react';
  import ReactDOM from 'react-dom';
+ import AnonymousStyleResolution from './components/AnonymousStyleResolution';
+ import NamedStyleResolution from './components/NamedStyleResolution';
  const App = () => (
    <div>
-      <h1>Hello world!!123123123123123123123</h1>
+      <AnonymousStyleResolution/>
+      <NamedStyleResolution/>
    </div>
  )
  ReactDOM.render(<App/>, document.getElementById('root'));

@@ -12,6 +12,21 @@ module.exports = {
             exclude: /node_modules/,
             test: /\.js$/,
             loader: 'babel-loader'
+        },{
+            test: /\.css$/,
+            use: [
+                 {
+                    loader: 'style-loader'
+                 }, 
+                 {
+                    loader: 'css-loader',
+                    options: {
+                       importLoader: 1,
+                       modules: true,
+                       localIdentName: '[name]_[local]__[hash:base64:5]'
+                    }
+                 }
+            ]
         }]
     },
     plugins:[
