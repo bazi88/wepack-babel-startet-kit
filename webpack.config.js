@@ -17,8 +17,8 @@ const DefinePluginConfig = new webpack.DefinePlugin({
 module.exports = {
     entry: path.join(__dirname, '/src/index.js'),
     output: {
-        filename: 'build.js',
-        path: path.join(__dirname, '/dist')
+        filename: '[name].[hash].build.js',
+        path: path.resolve(__dirname, '/dist')
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -87,9 +87,10 @@ module.exports = {
             default: false,
             commons: {
               test: /[\\/]node_modules[\\/]/,
-              name: 'vendor_app',
+              name: 'vendors',
               chunks: 'all',
-              minChunks: 2
+              minChunks: 2,
+              enforce: true
             }
         }
       }
